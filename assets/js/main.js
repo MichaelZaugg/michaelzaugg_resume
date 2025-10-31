@@ -143,3 +143,41 @@ function renderProjects(items, root = "projectGrid", { limit = null } = {}) {
     console.error(err);
   }
 })();
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const page = document.body.dataset.page;
+  if (page !== 'education') return;
+
+  const container = document.getElementById('education_md');
+
+  // 1) Load Markdown from file, else use inline fallback
+  let md = '';
+  try {
+    const res = await fetch('/content/education.md');          // same folder as education.html
+    if (!res.ok) throw new Error('Fetch failed');
+    md = await res.text();
+  } catch (err) {
+    const fallback = document.getElementById('md-education'); // inline fallback
+    md = fallback ? fallback.textContent : '# Education\n(coming soon)';
+  }
+  container.innerHTML = marked.parse(md);
+
+  // 2) Render the JSON “resume-list” (optional, already scaffolded in your HTML)
+  try {
+    const data = JSON.parse(document.getElementById('json-education').textContent);
+    const ul = document.getElementById('educationList');
+    ul.innerHTML = (data || []).map(item => `
+      <li class="resume-item">
+        <h3>${item.institution} — ${item.degree}</h3>
+        <div class="sub">${item.start}–${item.end}${item.location ? ` · ${item.location}` : ''}</div>
+        ${Array.isArray(item.highlights) && item.highlights.length
+          ? `<ul class="bullets">${item.highlights.map(h => `<li>${h}</li>`).join('')}</ul>`
+          : ''
+        }
+      </li>
+    `).join('');
+  } catch (e) {
+    console.warn('JSON render skipped:', e);
+  }
+});
+

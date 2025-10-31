@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Education — Michael Zaugg</title>
+  <link rel="icon" href="favicon.ico"/><link rel="stylesheet" href="assets/css/style.css"/>
+  <script defer src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body data-page="education">
+  <header class="nav">
+    <div class="wrapper nav__in">
+      <a class="badge" href="index.html">Michael Zaugg</a>
+      <nav class="tabs">
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="work.html">Work</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrapper">
+      <div id="education_md" class="card"></div>
+      <h1>Education</h1>
+      <ul id="educationList" class="resume-list"></ul>
+    </div>
+  </section>
+
+  <!-- Inline fallbacks -->
+  <script type="text/markdown" id="md-education">
+# Education
+
+Coursework in **embedded systems**, **motor control**, **sensors**, and **RTOS**. Labs emphasize practical hardware–software integration.
+  </script>
+
+  <script type="application/json" id="json-education">
+[
+  {
+    "institution":"BYU–Idaho",
+    "degree":"B.S. Computer Engineering",
+    "start":"2023",
+    "end":"Present",
+    "location":"Rexburg, ID",
+    "highlights":[
+      "FreeRTOS task design and timing analysis",
+      "PWM/ADC mapping, stepper motor control"
+    ]
+  }
+]
+  </script>
+</body>
+</html>

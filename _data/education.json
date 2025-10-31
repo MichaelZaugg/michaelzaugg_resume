@@ -1,0 +1,13 @@
+[
+  {
+    "institution": "BYU–Idaho",
+    "degree": "B.S. Computer Engineering",
+    "start": "2023",
+    "end": "Present",
+    "location": "Rexburg, ID",
+    "highlights": [
+      "Embedded systems, FreeRTOS, microcontrollers",
+      "PWM/ADC mapping, motor control"
+    ]
+  }
+]

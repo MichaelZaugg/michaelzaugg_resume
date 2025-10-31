@@ -1,0 +1,14 @@
+[
+  {
+    "title": "STM32 Stepper Motor Controller",
+    "subtitle": "FreeRTOS PWM + ADC mapping",
+    "image": "images/stepper.jpg",
+    "link": "https://github.com/michaelzaugg/stepper-controller"
+  },
+  {
+    "title": "Tron-Inspired MCP Terminal",
+    "subtitle": "Web puzzle · Identity disk login",
+    "video": "assets/videos/mcp-loop.mp4",
+    "link": "https://github.com/michaelzaugg/mcp-terminal"
+  }
+]

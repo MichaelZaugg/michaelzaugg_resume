@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Michael Zaugg — Home</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body data-page="home">
+  <!-- Sticky top bar -->
+  <header class="nav" role="navigation" aria-label="Primary">
+    <div class="wrapper nav__in">
+      <a class="badge" href="index.html">Michael Zaugg</a>
+      <nav class="tabs">
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="work.html">Work</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Video hero -->
+  <section class="hero full-bleed" aria-label="Intro">
+  <video autoplay muted loop playsinline preload="auto">
+    <source src="assets/videos/StockFootage.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="hero__content">
+    <div class="hero__inner wrapper">
+      <h1 class="headline">I make things. Hire me please.</h1>
+      <p class="sub">Embedded systems, robotics, game-adjacent experiments, and teaching.</p>
+      <a class="btn" href="projects.html">See Projects</a>
+    </div>
+  </div>
+</section>
+
+  <!-- About (markdown) -->
+<section class="section">
+  <div class="wrapper about-section">
+    <img src="images/profile.jpg" alt="Michael Zaugg" class="profile-left" />
+    <div id="about_md" class="about-text card"></div>
+  </div>
+</section>
+
+  <!-- Education snapshot -->
+  <section class="section">
+    <div class="wrapper">
+      <h2>Education (snapshot)</h2>
+      <ul id="educationList_home" class="resume-list"></ul>
+    </div>
+  </section>
+
+  <!-- Featured projects -->
+  <section class="section">
+    <div class="wrapper">
+      <h2>Featured Projects</h2>
+      <div id="projectGrid_home" class="grid"></div>
+    </div>
+  </section>
+
+  <!-- Work snapshot -->
+  <section class="section">
+    <div class="wrapper">
+      <h2>Work (snapshot)</h2>
+      <ul id="workList_home" class="resume-list"></ul>
+    </div>
+  </section>
+
+  <!-- Footer band -->
+  <section class="band">
+    <div class="wrapper">
+      <strong>Contact</strong><br/>
+      michaelzaugg01@gmail.com ·
+      <a href="https://github.com/michaelzaugg" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/zaugg-michael/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Inline fallbacks (work offline / file:// mode) -->
+  <script type="text/markdown" id="md-about">
+# About
+
+I build hardware–software systems (STM32/FreeRTOS, motor control, sensors) and create engaging, standards-aligned STEM instruction.
+  </script>
+
+  <script type="application/json" id="json-education">
+[
+  {
+    "institution":"BYU–Idaho",
+    "degree":"B.S. Computer Engineering",
+    "start":"2023",
+    "end":"Present",
+    "location":"Rexburg, ID",
+    "highlights":[
+      "Embedded systems, FreeRTOS, microcontrollers",
+      "PWM/ADC mapping, motor control"
+    ]
+  }
+]
+  </script>
+
+  <script type="application/json" id="json-experience">
+[
+  {
+    "company":"BYU–Idaho",
+    "position":"Fundamental Digital Systems TA",
+    "start":"Aug 2025",
+    "end":"Dec 2025",
+    "location":"Rexburg, ID",
+    "highlights":[
+      "Coding and stuff go brrrrrrrrr"
+    ]
+  }
+]
+  </script>
+
+  <script type="application/json" id="json-projects">
+[
+  {
+    "title":"STM32 Stepper Motor Controller",
+    "subtitle":"FreeRTOS PWM + ADC mapping",
+    "image":"images/stepper.jpg",
+    "link":"#"
+  },
+  {
+    "title":"Tron-Inspired MCP Terminal",
+    "subtitle":"Web puzzle · Identity disk login",
+    "video":"assets/videos/mcp-loop.mp4",
+    "link":"#"
+  }
+]
+  </script>
+</body>
+</html>

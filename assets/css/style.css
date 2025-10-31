@@ -98,3 +98,24 @@ h1,h2,h3{font-weight:800; margin:0 0 12px}
   z-index: 0;
 }
 
+
+/* Markdown content area */
+#education_md img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Helpers you can mix & match in Markdown (via inline HTML) */
+.img-xs    { width: 120px; }
+.img-sm    { width: 200px; }
+.img-md    { width: 320px; }
+.img-lg    { width: 480px; }
+.img-xl    { width: 640px; }
+
+.float-left  { float: left;  margin: 0 1rem 1rem 0; }
+.float-right { float: right; margin: 0 0 1rem 1rem; }
+.center      { margin: 1rem auto; text-align: center; }
+.shadow      { box-shadow: 0 8px 20px rgba(0,0,0,.25); border-radius: 12px; }
+.clearfix::after { content: ""; display: block; clear: both; }
+

@@ -88,7 +88,7 @@ function renderProjects(items, root = "projectGrid", { limit = null } = {}) {
         <div class="tile__body">
           <div class="tile__title">${p.title || ""}</div>
           ${p.subtitle ? `<div class="tile__meta">${p.subtitle}</div>` : ""}
-          ${p.link ? `<div style="margin-top:8px"><a class="btn" href="${p.link}" target="_blank" rel="noopener">Open</a></div>` : ""}
+          ${p.link ? `<div style="margin-top:8px"><a class="btn" href="${p.link}">Open</a></div>` : ""}
         </div>
       </article>`)
     );

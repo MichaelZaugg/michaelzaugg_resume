@@ -88,7 +88,7 @@ function renderProjects(items, root = "projectGrid", { limit = null } = {}) {
         <div class="tile__body">
           <div class="tile__title">${p.title || ""}</div>
           ${p.subtitle ? `<div class="tile__meta">${p.subtitle}</div>` : ""}
-          ${p.link ? `<div style="margin-top:8px"><a class="btn" href="${p.link}" target="_blank">Open</a></div>` : ""}
+          ${p.link ? `<div style="margin-top:8px"><a class="btn" href="${p.link}" target="_blank" rel="noopener">Open</a></div>` : ""}
         </div>
       </article>`)
     );
@@ -111,6 +111,7 @@ function renderProjects(items, root = "projectGrid", { limit = null } = {}) {
       renderExperience(exp, "workList_home");
       renderProjects(pro, "projectGrid_home", { limit: 2 });
     }
+
     if (page === "education") {
       const [md, data] = await Promise.all([
         loadMarkdownSmart({ id: "md-education", path: "content/education.md" }),
@@ -119,14 +120,16 @@ function renderProjects(items, root = "projectGrid", { limit = null } = {}) {
       document.getElementById("education_md").innerHTML = md;
       renderEducation(data, "educationList");
     }
+
     if (page === "projects") {
       const [md, data] = await Promise.all([
         loadMarkdownSmart({ id: "md-projects", path: "content/projects.md" }),
         loadJSONSmart({ id: "json-projects", path: "data/projects.json" }),
       ]);
-      document.getElementById("projects_md").innerHTML = md;
+      document.getElementById("projects_md")?.insertAdjacentHTML("afterbegin", md);
       renderProjects(data, "projectGrid");
     }
+
     if (page === "work") {
       const [md, data] = await Promise.all([
         loadMarkdownSmart({ id: "md-work", path: "content/work.md" }),
@@ -135,6 +138,7 @@ function renderProjects(items, root = "projectGrid", { limit = null } = {}) {
       document.getElementById("work_md").innerHTML = md;
       renderExperience(data, "workList");
     }
+
     if (page === "contact") {
       const md = await loadMarkdownSmart({ id: "md-contact", path: "content/contact.md" });
       document.getElementById("contact_md").innerHTML = md;
@@ -143,41 +147,3 @@ function renderProjects(items, root = "projectGrid", { limit = null } = {}) {
     console.error(err);
   }
 })();
-
-document.addEventListener('DOMContentLoaded', async () => {
-  const page = document.body.dataset.page;
-  if (page !== 'education') return;
-
-  const container = document.getElementById('education_md');
-
-  // 1) Load Markdown from file, else use inline fallback
-  let md = '';
-  try {
-    const res = await fetch('/content/education.md');          // same folder as education.html
-    if (!res.ok) throw new Error('Fetch failed');
-    md = await res.text();
-  } catch (err) {
-    const fallback = document.getElementById('md-education'); // inline fallback
-    md = fallback ? fallback.textContent : '# Education\n(coming soon)';
-  }
-  container.innerHTML = marked.parse(md);
-
-  // 2) Render the JSON “resume-list” (optional, already scaffolded in your HTML)
-  try {
-    const data = JSON.parse(document.getElementById('json-education').textContent);
-    const ul = document.getElementById('educationList');
-    ul.innerHTML = (data || []).map(item => `
-      <li class="resume-item">
-        <h3>${item.institution} — ${item.degree}</h3>
-        <div class="sub">${item.start}–${item.end}${item.location ? ` · ${item.location}` : ''}</div>
-        ${Array.isArray(item.highlights) && item.highlights.length
-          ? `<ul class="bullets">${item.highlights.map(h => `<li>${h}</li>`).join('')}</ul>`
-          : ''
-        }
-      </li>
-    `).join('');
-  } catch (e) {
-    console.warn('JSON render skipped:', e);
-  }
-});
-

@@ -9,6 +9,8 @@
 Phone: 971-363-7694
 
 Rexburg, ID
+
+*References available upon request.*
 </div>
 
 <hr></hr>

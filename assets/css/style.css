@@ -107,7 +107,6 @@ h1,h2,h3{font-weight:800; margin:0 0 12px}
 }
 
 /* Helpers you can mix & match in Markdown (via inline HTML) */
-.img-xxxs  { width: 60px;}
 .img-xxs   { width: 90px;}
 .img-xs    { width: 120px; }
 .img-sm    { width: 200px; }

@@ -8,7 +8,7 @@
 ## [Brigham Young University - Idaho](https://www.byui.edu/)
 
 **Bachelor of Science, Computer Engineering**<br>
-Rexburg, Idaho • 2023–Dec 2026 (Expected)
+Rexburg, Idaho • 2022–Dec 2026 (Expected)
 
 **GPA: 3.71**
 

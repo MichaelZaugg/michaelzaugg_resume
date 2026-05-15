@@ -10,7 +10,7 @@
 **Bachelor of Science, Computer Engineering**<br>
 Rexburg, Idaho • 2022–Dec 2026 (Expected)
 
-**GPA: 3.71**
+**GPA: 3.66**
 
 </div>
 

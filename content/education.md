@@ -14,8 +14,6 @@ Rexburg, Idaho • 2022–Dec 2026 (Expected)
 
 </div>
 
--------------------------------------------------------
-
 <div class="clearfix">
   <img src="content/images/education/TillamookHigh.png" alt="Tillamook High Logo"
        class="float-left img-xs shadow" loading="lazy">
@@ -25,6 +23,8 @@ Rexburg, Idaho • 2022–Dec 2026 (Expected)
 Tillamook, Oregon • 2019
 
 </div>
+
+-------------------------------------------------------
 
 # Certifications
 

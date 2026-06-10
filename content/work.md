@@ -5,6 +5,7 @@
        class="float-left img-xxs shadow" loading="lazy">
 
 **Computer Scientist Intern** <br>
+**309th Software Engineering Group (SWEG) Hill AFB**
 Roy, Utah<br>
 June 2026 - Present
 

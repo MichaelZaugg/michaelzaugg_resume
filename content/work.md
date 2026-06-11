@@ -16,6 +16,7 @@ June 2026 - Present
        class="float-left img-xxs shadow" loading="lazy">
 
 **Fundamental Digital Systems TA** <br>
+**Brigham Young University - Idaho** <br>
 Rexburg, Idaho<br>
 Aug 2025 - Dec 2025
 
@@ -26,6 +27,7 @@ Aug 2025 - Dec 2025
        class="float-left img-xxs shadow" loading="lazy">
 
 **Early Morning Custodian - Shift Lead** <br>
+**Brigham Young University - Idaho** <br>
 Rexburg, Idaho<br>
 Sept 2023 - July 2025
 
@@ -36,6 +38,7 @@ Sept 2023 - July 2025
        class="float-left img-xxs shadow" loading="lazy">
 
 **Ice Cream Operator** <br>
+**Tillamook County Creamery Association** <br>
 Tillamook, Oregon<br>
 Jan 2023 - Aug 2024
 
